@@ -125,7 +125,7 @@ module Imdb
 
     # Returns an int containing the number of user ratings
     def votes
-      rating_document.at('//span[@itemprop="ratingValue"]').content.strip.gsub(/[^\d+]/, '').to_i rescue nil
+      rating_document.at('//span[@itemprop="ratingCount"]').content.strip.gsub(/[^\d+]/, '').to_i rescue nil
     end
 
     # Returns a string containing the tagline
